@@ -1,0 +1,154 @@
+---
+title: "Using Git and GitHub with R"
+output:
+  xaringan::moon_reader:
+    css: ["style.css", "default"]
+    lib_dir: libs
+    df_print: paged
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: 16:9
+---
+
+```{r child = "setup.Rmd"}
+```
+
+class: dk-section-title, inverse, middle, center
+
+# Using Git and GitHub with R
+
+---
+
+class: dk-section-title, inverse, middle, center
+
+## What is Git? What is GitHub
+
+---
+
+TODO: Image of Git vs GitHub
+
+---
+
+### Git
+
+---
+
+### GitHub
+
+- Mention alternatives
+
+---
+
+## Why Should You Learn to Use Git and GitHub?
+
+- Backup
+- Version control
+- Collaboration
+
+---
+
+class: dk-section-title, inverse, middle, center
+
+# Setup
+
+---
+
+## Update Everything
+
+- R
+- RStudio
+- R Packages
+
+---
+
+## Install Git
+
+---
+
+## Configure Git
+
+---
+
+class: dk-section-title, inverse, middle, center
+
+# Using Git
+
+---
+
+## Create a Git Repository
+
+---
+
+## Commits
+
+---
+
+## Commit History
+
+---
+
+
+class: dk-section-title, inverse, middle, center
+
+# Using GitHub
+
+- Repositories
+- View commit history on GitHub
+
+---
+
+## Create a GitHub Account
+
+---
+
+## Create a Personal Access Token
+
+---
+
+## Connect RStudio and GitHub
+
+---
+
+## Push an RStudio Project to a GitHub Repository
+
+---
+
+## Pull a GitHub Repository to an RStudio Project
+
+---
+
+## Push and Pull Between RStudio and GitHub
+
+- Talk about staging, commits again
+
+---
+
+
+class: dk-section-title, inverse, middle, center
+
+# Collaborating with GitHub
+
+---
+
+## Always Pull Before Pushing
+
+---
+
+## Push Early and Often
+
+---
+
+## GitHub Issues
+
+---
+
+## Branches
+
+---
+
+## Pull Requests
+
+
+
