@@ -3,7 +3,7 @@
   <head>
     <title>Using Git and GitHub with R</title>
     <meta charset="utf-8" />
-    <script src="libs/header-attrs-2.8/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
     <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
@@ -37,6 +37,10 @@ class: dk-section-title, inverse, middle, center
 
 # Using Git and GitHub with R
 
+???
+
+I show things as much as possible within R and not at the command line
+
 ---
 
 class: dk-section-title, inverse, middle, center
@@ -45,25 +49,121 @@ class: dk-section-title, inverse, middle, center
 
 ---
 
+class: middle
+
+--
+
+.pull-left[
+![](images/git-logo.svg)
+]
+
+--
+
+.pull-right[
+![](images/github-logo.svg)
+
+]
+
+
+---
+
+class: middle
+
+![](images/git-github-not-the-same.svg)
+
+???
+
+They're not the same thing
+
+You can use one without the other
+
 TODO: Image of Git vs GitHub
 
 ---
 
 ### Git
 
+Version control system **on your local computer**
+
+--
+
+Allows you to take **snapshots** of your code as it progresses
+
+--
+
+Allows you to view the **history of your code over time**
+
+---
+
+class: middle
+
+### Git
+
+![](images/git-visual.svg)
+
+
 ---
 
 ### GitHub
 
-- Mention alternatives
+---
+
+![](images/github-website.png)
+
+???
+
+Just pan on GH website
 
 ---
 
+### GitHub Alternatives
+
+???
+
+Just pan on GitLab and BitBucket websites
+
+
+---
+
+class: dk-section-title, inverse, middle, center
+
 ## Why Should You Learn to Use Git and GitHub?
 
-- Backup
-- Version control
-- Collaboration
+---
+
+### Backup
+
+---
+
+class: center, middle
+
+![](images/git-and-rstudio.svg)
+---
+
+class: center, middle
+
+![](images/git-and-rstudio-in-sync.svg)
+
+---
+
+### Version control
+
+---
+
+class: center, middle
+
+![](images/git-visual.svg)
+
+
+---
+
+### Collaboration
+
+---
+
+class: center, middle
+
+![](images/git-collaboration.svg)
 
 ---
 
@@ -73,11 +173,31 @@ class: dk-section-title, inverse, middle, center
 
 ---
 
+class: dk-section-title, inverse, middle, center
+
 ## Update Everything
 
-- R
-- RStudio
-- R Packages
+???
+
+The setup is 90% of the challenge
+
+Update R
+
+Update RStudio
+
+Update all packages (may cause issues, but worth it)
+
+---
+
+### R
+
+---
+
+### RStudio
+
+---
+
+### R Packages
 
 ---
 
@@ -85,7 +205,33 @@ class: dk-section-title, inverse, middle, center
 
 ---
 
+### Mac
+
+???
+
+Check version on Mac, update if necessary, something with xcode?
+https://happygitwithr.com/install-git.html#macos
+
+---
+
+### Windows
+
+TODO: Set up Windows VM (see https://www.viget.com/articles/set-up-a-windows-10-virtual-machine-and-browser-test-ie-11-and-edge-on-mac/)
+
+---
+
 ## Configure Git
+
+
+```r
+library(usethis)
+use_git_config(user.name = "Jane Doe", user.email = "jane@example.org")
+```
+
+???
+
+Explain that you can do lots of things on command line, but I'm showing how not to do so
+
 
 ---
 
@@ -97,39 +243,93 @@ class: dk-section-title, inverse, middle, center
 
 ## Create a Git Repository
 
+
+```r
+use_git()
+```
+
+
 ---
 
 ## Commits
 
+???
+
+Staging files
+
+Commit messages
+
 ---
 
 ## Commit History
+
+???
+
+Show just in RStudio
+
+Explain diffs
 
 ---
 
 
 class: dk-section-title, inverse, middle, center
 
-# Using GitHub
+# GitHub
 
-- Repositories
-- View commit history on GitHub
+---
+
+## Repositories
+
+One repository for each project
+
+---
+
+## View Commit History on GitHub
+
+???
+
+Same as viewing locally but you can also see code as it was at any point
 
 ---
 
 ## Create a GitHub Account
 
+???
+
+Show me on the website signing up
+
 ---
 
-## Create a Personal Access Token
+## Create a Personal Access Token (PAT)
+
+
+```r
+create_github_token()
+```
+
 
 ---
 
 ## Connect RStudio and GitHub
 
+
+```r
+# install.packages("gitcreds")
+library(gitcreds)
+gitcreds_set()
+```
+
+
 ---
 
 ## Push an RStudio Project to a GitHub Repository
+
+
+```r
+use_git()
+use_github()
+```
+
 
 ---
 
