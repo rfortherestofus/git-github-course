@@ -88,7 +88,6 @@ class: middle
 
 ### GitHub
 
----
 
 ![](images/github-website.png)
 
@@ -99,6 +98,14 @@ Just pan on GH website
 ---
 
 ### GitHub Alternatives
+
+![](images/bitbucket.png)
+
+---
+
+### GitHub Alternatives
+
+![](images/gitlab-bitbucket.png)
 
 ???
 
@@ -145,7 +152,25 @@ class: center, middle
 
 class: center, middle
 
-![](images/git-collaboration.svg)
+![](images/git-collaboration1.svg)
+
+---
+
+class: center, middle
+
+![](images/git-collaboration2.svg)
+
+---
+
+class: center, middle
+
+![](images/git-collaboration3.svg)
+
+---
+
+class: center, middle
+
+![](images/git-collaboration4.svg)
 
 ---
 
@@ -155,13 +180,18 @@ class: dk-section-title, inverse, middle, center
 
 ---
 
+class: center, middle
+
+![](images/setup-90pct.svg)
+
+
+---
+
 class: dk-section-title, inverse, middle, center
 
 ## Update Everything
 
 ???
-
-The setup is 90% of the challenge
 
 Update R
 
@@ -171,43 +201,50 @@ Update all packages (may cause issues, but worth it)
 
 ---
 
-### R
+class: center, middle
+
+[![](images/download-r.png)](https://cran.microsoft.com)
 
 ---
 
-### RStudio
+class: center, middle
+
+[![](images/download-rstudio.png)](https://www.rstudio.com/products/rstudio/download/)
 
 ---
 
-### R Packages
+class: center, middle
+
+![](images/update-packages.png)
 
 ---
+
+class: dk-section-title, center, middle
 
 ## Install Git
 
 ---
 
-### Mac
 
-???
+[![](images/download-git.png)](http://git-scm.com/downloads)
 
-Check version on Mac, update if necessary, something with xcode?
-https://happygitwithr.com/install-git.html#macos
-
----
-
-### Windows
-
-TODO: Set up Windows VM (see https://www.viget.com/articles/set-up-a-windows-10-virtual-machine-and-browser-test-ie-11-and-edge-on-mac/)
 
 ---
 
 ## Configure Git
 
+Let's tell Git who we are!
+
+--
+
+
 ```{r eval = FALSE}
+install.packages("usethis") # Only if usethis is not installed
 library(usethis)
 use_git_config(user.name = "Jane Doe", user.email = "jane@example.org")
 ```
+
+</div>
 
 ???
 
@@ -224,9 +261,17 @@ class: dk-section-title, inverse, middle, center
 
 ## Create a Git Repository
 
+--
+
 ```{r}
 use_git()
 ```
+
+---
+
+class: center, middle
+
+![](images/git-activated.svg)
 
 
 ---
@@ -234,6 +279,8 @@ use_git()
 ## Commits
 
 ???
+
+Commits are a snapshot of your code at any point
 
 Staging files
 
@@ -244,6 +291,8 @@ Commit messages
 ## Commit History
 
 ???
+
+Explain that we make commit message to know what's different at this point
 
 Show just in RStudio
 

@@ -3,6 +3,8 @@ html { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
   html { font-family: 'Inter var', sans-serif; }
 }
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
 
 
 body {
@@ -34,6 +36,10 @@ body {
 
 .small {
   font-size: 70%
+}
+
+code {
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .small code {
@@ -352,4 +358,31 @@ box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
 
 .title-slide h2 {
   font-weight: 400;
+}
+
+/* Typewriter */
+/* https://css-tricks.com/snippets/css/typewriter-effect/ */
+
+.typewriter {
+  font-family: 'IBM Plex Mono', monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .01em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
