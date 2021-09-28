@@ -35,6 +35,8 @@ layout: true
 
 class: dk-section-title, inverse, middle, center
 
+background-image:url("images/bg-github.jpg")
+
 # Using Git and GitHub with R
 
 ???
@@ -44,6 +46,8 @@ I show things as much as possible within R and not at the command line
 ---
 
 class: dk-section-title, inverse, middle, center
+
+background-image:url("images/bg-confused.jpg")
 
 ## What is Git? What is GitHub
 
@@ -83,6 +87,8 @@ TODO: Image of Git vs GitHub
 
 ### Git
 
+--
+
 Version control system **on your local computer**
 
 --
@@ -95,9 +101,7 @@ Allows you to view the **history of your code over time**
 
 ---
 
-class: middle
-
-### Git
+class: middle, center
 
 ![](images/git-visual.svg)
 
@@ -134,41 +138,45 @@ Just pan on GitLab and BitBucket websites
 
 class: dk-section-title, inverse, middle, center
 
+background-image:url("images/bg-workstation.jpg")
+
 ## Why Should You Learn to Use Git and GitHub?
 
 ---
 
-### Backup
+class: center, middle
+
+### Version Control
+
+--
+
+![](images/git-visual.svg)
 
 ---
 
 class: center, middle
+
+### Backup
+
+--
+
 
 ![](images/git-and-rstudio.svg)
 ---
 
 class: center, middle
 
+### Backup
+
 ![](images/git-and-rstudio-in-sync.svg)
 
 ---
 
-### Version control
-
----
-
 class: center, middle
-
-![](images/git-visual.svg)
-
-
----
 
 ### Collaboration
 
----
-
-class: center, middle
+--
 
 ![](images/git-collaboration1.svg)
 
@@ -176,11 +184,15 @@ class: center, middle
 
 class: center, middle
 
+### Collaboration
+
 ![](images/git-collaboration2.svg)
 
 ---
 
 class: center, middle
+
+### Collaboration
 
 ![](images/git-collaboration3.svg)
 
@@ -188,11 +200,15 @@ class: center, middle
 
 class: center, middle
 
+### Collaboration
+
 ![](images/git-collaboration4.svg)
 
 ---
 
 class: dk-section-title, inverse, middle, center
+
+background-image:url("images/bg-setup.jpg")
 
 # Setup
 
@@ -206,6 +222,8 @@ class: center, middle
 ---
 
 class: dk-section-title, inverse, middle, center
+
+background-image:url("images/bg-update.jpg")
 
 ## Update Everything
 
@@ -237,12 +255,9 @@ class: center, middle
 
 ---
 
-class: dk-section-title, center, middle
-
 ## Install Git
 
----
-
+--
 
 [![](images/download-git.png)](http://git-scm.com/downloads)
 
@@ -263,7 +278,6 @@ library(usethis)
 use_git_config(user.name = "Jane Doe", user.email = "jane@example.org")
 ```
 
-&lt;/div&gt;
 
 ???
 
@@ -274,11 +288,13 @@ Explain that you can do lots of things on command line, but I'm showing how not 
 
 class: dk-section-title, inverse, middle, center
 
+background-image:url("images/bg-git.jpg")
+
 # Using Git
 
 ---
 
-## Create a Git Repository
+## Create a Local Git Repository
 
 --
 
@@ -322,6 +338,8 @@ Part 2: A commit message that tells you what has changed since the last commit
 
 ### Staging Files
 
+--
+
 Which files do you want to include in this commit? 
 
 --
@@ -352,6 +370,8 @@ class: center, middle
 
 class: dk-section-title, inverse, middle, center
 
+background-image:url("images/bg-whisper.jpg")
+
 ## Commit Messages Tell Us What Changes Were Made
 
 ---
@@ -372,11 +392,6 @@ Explain that we make commit message to know what's different at this point
 
 Show just in RStudio
 
----
-
-### Diffs
-
-
 Explain diffs
 
 ---
@@ -384,11 +399,20 @@ Explain diffs
 
 class: dk-section-title, inverse, middle, center
 
+background-image:url("images/bg-github.jpg")
+
 # GitHub
 
 ---
 
+
 ## Repositories
+
+--
+
+aka "repo"
+
+--
 
 One repository for each project
 
@@ -396,13 +420,49 @@ One repository for each project
 
 ## View Commit History on GitHub
 
+--
+
+![](images/github-commit-history.png)
+
+---
+
+class: center, middle
+
+### View Commit History on RStudio or GitHub
+
+![](images/commit-history-rstudio-github.svg)
+
+---
+
+class: center, middle
+
+### View Commit History on RStudio or GitHub
+
+![](images/commit-history-rstudio-github-same-thing.svg)
+
+
 ???
 
 Same as viewing locally but you can also see code as it was at any point
 
 ---
 
+
+## Connect RStudio and GitHub
+
+---
+
+class: center, middle
+
+![](images/git-and-rstudio-in-sync.svg)
+
+---
+
 ## Create a GitHub Account
+
+---
+
+![](images/github-signup.svg)
 
 ???
 
@@ -424,39 +484,142 @@ create_github_token()
 
 
 ```r
-# install.packages("gitcreds")
+install.packages("gitcreds") # Only if gitcreds is not installed
 library(gitcreds)
 gitcreds_set()
 ```
 
+---
+
+## Two Options
+
+&lt;br&gt;
+
+--
+
+![](images/github-to-rstudio.svg)
+
+--
+&lt;br&gt;&lt;br&gt;
+
+![](images/rstudio-to-github.svg)
 
 ---
 
 ## Push an RStudio Project to a GitHub Repository
 
+![](images/rstudio-to-github.svg)
+
+---
+
+### Step 1: Initialize a **local** git repository in your RStudio project
+
 
 ```r
 use_git()
-use_github()
 ```
 
+---
+
+### Step 2: Connect your local RStudio project to a **remote GitHub repository**
+
+
+```r
+use_github()
+```
 
 ---
 
 ## Pull a GitHub Repository to an RStudio Project
 
+&lt;br&gt;&lt;br&gt;
+![](images/github-to-rstudio.svg)
+
 ---
 
-## Push and Pull Between RStudio and GitHub
+### Step 1: Create a New Repository on GitHub
+
+---
+
+class: middle, center
+
+[![](images/github-new-repo.png)](https://github.com/new)
+
+---
+
+### Step 2: Create a New RStudio Project by Cloning GitHub Repository
+
+.center[
+  ![](images/clone-repo.png)
+]
+
+
+---
+
+## Keep RStudio and GitHub in Sync
+
+--
+
+1. Work in RStudio
+
+--
+
+1. Any time you make significant changes, stage and commit
+
+--
+
+1. Push your work to GitHub
+
+???
 
 - Talk about staging, commits again
+
+- Finish off by saying you don't need to pull if you're the only one working on the project, but this becomes necessary when you collaborate
 
 ---
 
 
 class: dk-section-title, inverse, middle, center
 
+background-image:url("images/bg-pair-programming.jpg")
+
 # Collaborating with GitHub
+
+---
+
+## Many People Can Work on One Repository
+
+---
+
+class: center, middle
+
+![](images/git-collaboration4.svg)
+
+---
+
+class: center, middle
+
+[![](images/multiple-collaborators.svg)](https://github.com/rfortherestofus/api-food-asset-map/commits/main)
+
+---
+
+## Merge Conflicts
+
+This is not unique to Git/GitHub
+
+--
+
+![](images/dropbox-conflicted-copy.webp)
+
+---
+
+### Merge Conflicts
+
+When you and a collaborator edit the same code
+
+???
+
+How do we avoid them? See next steps.
 
 ---
 
@@ -468,7 +631,27 @@ class: dk-section-title, inverse, middle, center
 
 ---
 
+## Dealing with Merge Conflicts
+
+---
+
+# Project Management with GitHub
+
+---
+
 ## GitHub Issues
+
+---
+
+### Assign Issues to Individuals
+
+---
+
+### Reference Commits in Issues
+
+---
+
+## Work on Your Code Without Messing Up Things that are Working
 
 ---
 
