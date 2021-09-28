@@ -288,13 +288,74 @@ Commit messages
 
 ---
 
+## Commits Have Two Parts
+
+--
+
+Part 1: Files you "stage" (i.e. include) 
+
+--
+
+Part 2: A commit message that tells you what has changed since the last commit
+
+---
+
+### Staging Files
+
+Which files do you want to include in this commit? 
+
+--
+
+Include all files for now
+
+--
+
+![](images/stage-files.svg)
+
+---
+
+### Commit Messages
+
+---
+
+class: center, middle
+
+![](images/final-docx.svg)
+
+---
+
+class: center, middle
+
+![](images/no-version-info.svg)
+
+---
+
+class: dk-section-title, inverse, middle, center
+
+## Commit Messages Tell Us What Changes Were Made
+
+---
+
+class: center, middle
+
+![](images/commit-message.svg)
+
+---
+
 ## Commit History
+
+![](images/rstudio-review-changes.svg)
 
 ???
 
 Explain that we make commit message to know what's different at this point
 
 Show just in RStudio
+
+---
+
+### Diffs
+
 
 Explain diffs
 
