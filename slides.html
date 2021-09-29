@@ -99,6 +99,7 @@ Allows you to take **snapshots** of your code as it progresses
 
 Allows you to view the **history of your code over time**
 
+
 ---
 
 class: middle, center
@@ -357,7 +358,7 @@ class: inverse
 
 --
 
-1. Create a new RStudio project
+1. Create a new RStudio project called `local-first`
 
 --
 
@@ -385,11 +386,11 @@ Commit messages
 
 --
 
-Part 1: Files you "stage" (i.e. include) 
+Part 1: Files you **stage** (i.e. include) 
 
 --
 
-Part 2: A commit message that tells you what has changed since the last commit
+Part 2: A **commit message** that tells you what has changed since the last commit
 
 ---
 
@@ -445,7 +446,7 @@ class: inverse
 
 --
 
-1. Create a new R script file in your project and add some code in it
+1. Create a new R file called README.md in your `local-first` project and add text
 
 --
 
@@ -453,11 +454,11 @@ class: inverse
 
 --
 
-1. Check the staged button next to your new file (and any other modified files)
+1. Check the staged button next to your new README.md file (and any other modified files)
 
 --
 
-1. Add a commit message (e.g. "Add new data analysis file")
+1. Add a commit message (e.g. "Add README file")
 
 --
 
@@ -527,7 +528,6 @@ One repository for each project
 
 ---
 
-### GitHub Repositories
 
 ![](images/bg-github-repo.png)
 
@@ -565,10 +565,11 @@ Same as viewing locally but you can also see code as it was at any point
 
 ---
 
-### TODO: Show how you can view diff or code as it was at that point
+### View Past Versions of Code
 
+--
 
-
+![](images/github-past-versions.svg)
 
 ---
 
@@ -579,6 +580,10 @@ class: inverse
 --
 
 1. Open the [API Community Food Asset Mapping Project GitHub repository](https://github.com/rfortherestofus/api-food-asset-map)
+
+--
+
+1. Click on commits
 
 --
 
@@ -660,6 +665,12 @@ class: inverse
 
 ---
 
+class: center, middle, inverse
+
+## Keeping RStudio and GitHub in Sync
+
+---
+
 ## Two Options
 
 &lt;br&gt;
@@ -707,11 +718,11 @@ class: inverse
 
 --
 
-1. Open the project you created previously and which already has a **local** Git repository
+1. Open the `local-first` project you created previously
 
 --
 
-1. Push your project to GitHub using the `use_github()` function from the `usethis` package
+1. Push your `local-first` project to GitHub using the `use_github()` function from the `usethis` package
 
 ---
 
@@ -747,11 +758,11 @@ class: inverse
 
 --
 
-1. Create a new repository on GitHub
+1. Create a new repository on GitHub called `github-first`
 
 --
 
-1. Create a new project in RStudio by cloning the GitHub repository you just created
+1. Create a new project in RStudio by cloning the `github-first` GitHub repository you just created
 
 
 ---
@@ -786,7 +797,7 @@ class: inverse
 
 --
 
-1. Make some changes to any file in your local repository
+1. Make some changes to the README.md in the `github-first` project
 
 --
 
