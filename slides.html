@@ -37,7 +37,7 @@ class: dk-section-title, inverse, middle, center
 
 background-image:url("images/bg-github.jpg")
 
-# Using Git and GitHub with R
+# Introduction to Git and GitHub
 
 ???
 
@@ -210,7 +210,7 @@ class: dk-section-title, inverse, middle, center
 
 background-image:url("images/bg-setup.jpg")
 
-# Setup
+## Update Everything
 
 ---
 
@@ -225,7 +225,7 @@ class: dk-section-title, inverse, middle, center
 
 background-image:url("images/bg-update.jpg")
 
-## Update Everything
+### Update Everything
 
 ???
 
@@ -252,6 +252,31 @@ class: center, middle
 class: center, middle
 
 ![](images/update-packages.png)
+---
+
+class: inverse
+
+# Your Turn
+
+--
+
+1. Update R
+
+--
+
+1. Update RStudio
+
+--
+
+1. Update all of your R packages
+
+---
+
+class: dk-section-title, inverse, middle, center
+
+background-image:url("images/bg-git.jpg")
+
+# Git
 
 ---
 
@@ -261,6 +286,20 @@ class: center, middle
 
 [![](images/download-git.png)](http://git-scm.com/downloads)
 
+
+---
+
+class: inverse
+
+# Your Turn
+
+--
+
+1. Install Git
+
+--
+
+1. Confirm that you installed Git correctly by going to your terminal in RStudio and typing `git --version` (you should have version 2.33.0 or later)
 
 ---
 
@@ -283,14 +322,15 @@ use_git_config(user.name = "Jane Doe", user.email = "jane@example.org")
 
 Explain that you can do lots of things on command line, but I'm showing how not to do so
 
-
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse
 
-background-image:url("images/bg-git.jpg")
+### Your Turn
 
-# Using Git
+--
+
+1. Configure Git by adding a user name and email to your profile
 
 ---
 
@@ -309,6 +349,23 @@ class: center, middle
 
 ![](images/git-activated.svg)
 
+---
+
+class: inverse
+
+### Your Turn
+
+--
+
+1. Create a new RStudio project
+
+--
+
+1. Add a new Git repository to your project
+
+--
+
+1. Make sure the Git tab shows up in the top right panel
 
 ---
 
@@ -372,7 +429,7 @@ class: dk-section-title, inverse, middle, center
 
 background-image:url("images/bg-whisper.jpg")
 
-## Commit Messages Tell Us What Changes Were Made
+### Commit Messages Tell Us What Changes Were Made
 
 ---
 
@@ -382,7 +439,40 @@ class: center, middle
 
 ---
 
+class: inverse
+
+### Your Turn
+
+--
+
+1. Create a new R script file in your project and add some code in it
+
+--
+
+1. Go to the Git tab and hit the commit button
+
+--
+
+1. Check the staged button next to your new file (and any other modified files)
+
+--
+
+1. Add a commit message (e.g. "Add new data analysis file")
+
+--
+
+1. Click the commit button
+
+---
+
+class: dk-section-title, inverse, middle, center
+
+
+background-image:url("images/bg-time-travel.jpg")
+
 ## Commit History
+
+---
 
 ![](images/rstudio-review-changes.svg)
 
@@ -393,6 +483,25 @@ Explain that we make commit message to know what's different at this point
 Show just in RStudio
 
 Explain diffs
+
+
+---
+
+class: inverse
+
+### Your Turn
+
+--
+
+1. Hit the history button under the Git tab
+
+--
+
+1. View the history of your repository
+
+--
+
+1. Make sure you understand the commit history (top section) and the diff (bottom section)
 
 ---
 
@@ -406,7 +515,7 @@ background-image:url("images/bg-github.jpg")
 ---
 
 
-## Repositories
+## GitHub Repositories
 
 --
 
@@ -418,7 +527,16 @@ One repository for each project
 
 ---
 
-## View Commit History on GitHub
+### GitHub Repositories
+
+![](images/bg-github-repo.png)
+
+
+
+---
+
+
+## GitHub Commit History
 
 --
 
@@ -447,6 +565,38 @@ Same as viewing locally but you can also see code as it was at any point
 
 ---
 
+### TODO: Show how you can view diff or code as it was at that point
+
+
+
+
+---
+
+class: inverse
+
+### Your Turn
+
+--
+
+1. Open the [API Community Food Asset Mapping Project GitHub repository](https://github.com/rfortherestofus/api-food-asset-map)
+
+--
+
+1. Take a look through the commit history to see how the code changed over time
+
+
+---
+
+class: dk-section-title, middle, center
+
+background-image:url("images/bg-in-sync.jpg")
+
+
+# Keep RStudio and GitHub in Sync
+
+
+---
+
 
 ## Connect RStudio and GitHub
 
@@ -458,7 +608,7 @@ class: center, middle
 
 ---
 
-## Create a GitHub Account
+### Create a GitHub Account
 
 ---
 
@@ -470,7 +620,7 @@ Show me on the website signing up
 
 ---
 
-## Create a Personal Access Token (PAT)
+### Create a Personal Access Token (PAT)
 
 
 ```r
@@ -480,7 +630,7 @@ create_github_token()
 
 ---
 
-## Connect RStudio and GitHub
+### Connect RStudio and GitHub
 
 
 ```r
@@ -488,6 +638,25 @@ install.packages("gitcreds") # Only if gitcreds is not installed
 library(gitcreds)
 gitcreds_set()
 ```
+
+
+---
+
+class: inverse
+
+### Your Turn
+
+--
+
+1. Create a GitHub account
+
+--
+
+1. Create a GitHub personal access token (PAT) using the `create_github_token()` function from the `usethis` package
+
+--
+
+1. Register your PAT using the `gitcreds_set()` function from the `gitcreds` package
 
 ---
 
@@ -528,6 +697,22 @@ use_git()
 use_github()
 ```
 
+
+
+---
+
+class: inverse
+
+### Your Turn
+
+--
+
+1. Open the project you created previously and which already has a **local** Git repository
+
+--
+
+1. Push your project to GitHub using the `use_github()` function from the `usethis` package
+
 ---
 
 ## Pull a GitHub Repository to an RStudio Project
@@ -547,7 +732,7 @@ class: middle, center
 
 ---
 
-### Step 2: Create a New RStudio Project by Cloning GitHub Repository
+### Step 2: Create a New RStudio Project by Cloning a GitHub Repository
 
 .center[
   ![](images/clone-repo.png)
@@ -556,7 +741,22 @@ class: middle, center
 
 ---
 
-## Keep RStudio and GitHub in Sync
+class: inverse
+
+### Your Turn
+
+--
+
+1. Create a new repository on GitHub
+
+--
+
+1. Create a new project in RStudio by cloning the GitHub repository you just created
+
+
+---
+
+## Pushing and Pulling Between RStudio and GitHub
 
 --
 
@@ -575,6 +775,34 @@ class: middle, center
 - Talk about staging, commits again
 
 - Finish off by saying you don't need to pull if you're the only one working on the project, but this becomes necessary when you collaborate
+
+---
+
+
+
+class: inverse
+
+### Your Turn
+
+--
+
+1. Make some changes to any file in your local repository
+
+--
+
+1. Stage this file (and any other modified files) and add a commit message
+
+--
+
+1. Hit commit
+
+--
+
+1. After you commit, push your changes to GitHub
+
+--
+
+1. Go to your GitHub repository and make sure you see your changes
 
 ---
 
@@ -661,7 +889,9 @@ How do we avoid them? See next steps.
 
 ## Pull Requests
 
+---
 
+# Cool Stuff You Can Do with GitHub
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
