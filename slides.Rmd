@@ -534,6 +534,8 @@ class: center, middle
 
 ### View Commit History on RStudio or GitHub
 
+<br>
+
 ![](images/commit-history-rstudio-github.svg)
 
 ---
@@ -548,6 +550,15 @@ class: center, middle
 ???
 
 Same as viewing locally but you can also see code as it was at any point
+
+---
+
+### View Diffs on GitHub
+
+--
+
+![](images/github-diff.png)
+
 
 ---
 
@@ -583,13 +594,9 @@ class: dk-section-title, middle, center
 background-image:url("images/bg-in-sync.jpg")
 
 
-# Keep RStudio and GitHub in Sync
+# Connect RStudio and GitHub
 
 
----
-
-
-## Connect RStudio and GitHub
 
 ---
 
@@ -613,7 +620,10 @@ Show me on the website signing up
 
 ### Create a Personal Access Token (PAT)
 
+--
+
 ```{r}
+library(usethis)
 create_github_token()
 ```
 
@@ -621,6 +631,8 @@ create_github_token()
 ---
 
 ### Connect RStudio and GitHub
+
+--
 
 ```{r}
 install.packages("gitcreds") # Only if gitcreds is not installed
@@ -649,7 +661,9 @@ class: inverse
 
 ---
 
-class: center, middle, inverse
+class: dk-section-title, middle, center
+
+background-image:url("images/handshake.jpg")
 
 ## Keeping RStudio and GitHub in Sync
 
@@ -749,7 +763,7 @@ class: inverse
 
 ---
 
-## Pushing and Pulling Between RStudio and GitHub
+## Keeping RStudio and GitHub in Sync
 
 --
 
@@ -757,7 +771,7 @@ class: inverse
 
 --
 
-1. Any time you make significant changes, stage and commit
+1. Any time you make significant changes, make a commit
 
 --
 
@@ -779,7 +793,7 @@ class: inverse
 
 --
 
-1. Make some changes to the README.md in the `github-first` project
+1. Create a README.md in the `github-first` project and add some text
 
 --
 
