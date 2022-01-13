@@ -255,7 +255,7 @@ background-image:url("images/bg-git.jpg")
 
 --
 
-[![](images/download-git.png)](http://git-scm.com/downloads)
+[![](images/download-git.png)](https://git-scm.com/downloads)
 
 
 ---
@@ -818,17 +818,32 @@ class: dk-section-title, inverse, middle, center
 
 background-image:url("images/bg-pair-programming.jpg")
 
-# Collaborating with GitHub
+# Collaborating with Git and GitHub
 
 ---
 
-## Many People Can Work on One Repository
+class: dk-section-title, inverse, middle, center
+
+background-image:url("images/kids-pulling.jpg")
+
+## Why Use GitHub vs Dropbox, Google Drive, Box, etc? 
 
 ---
 
-class: center, middle
+## With GitHub, Many People Can Work on the Same Project at Same Time
+
+--
 
 ![](images/git-collaboration4.svg)
+
+???
+
+People work individually on code
+
+Then push
+
+Then pull and deal with conflicts if they happen
+
 
 ---
 
@@ -838,7 +853,85 @@ class: center, middle
 
 ---
 
+## Using GitHub Lets Us Combine Code and Communication About Our Code
+
+![](images/commit-messages.png)
+
+???
+
+https://github.com/rfortherestofus/api-food-asset-map/commits/main
+
+
+
+---
+
+background-image:url("images/rubix-cube.jpg")
+
+class: center, middle, dk-section-title
+
+
+## There Are Lots of Other Cool Things You Can Do if You Use GitHub
+
+???
+
+Build websites
+
+GitHub Actions
+
+Contribute to open source
+
+---
+
+background-image:url("images/hands-in-head.jpg")
+
+class: center, middle, dk-section-title
+
+## Drawback of GitHub: Sometimes Things Go Wrong
+
+---
+
+class: center, middle
+
+![](images/dangit-git.png)
+
+???
+
+https://ohshitgit.com + https://dangitgit.com/en
+
+---
+
+class: center, middle
+
+![](https://imgs.xkcd.com/comics/git.png)
+
+???
+
+https://xkcd.com/1597/
+
+---
+
+class: dk-section-title, inverse, middle, center
+
+background-image:url("images/pull.jpg")
+
+## Can't Pull Code from GitHub
+
+???
+
+Make example of me working and not being able to pull in changes
+
+Have changes locally that you haven't committed which you need to do before pulling
+
+
+---
+
+class: dk-section-title, inverse, middle, center
+
+background-image:url("images/highway.jpg")
+
 ## Merge Conflicts
+
+--
 
 This is not unique to Git/GitHub
 
@@ -846,41 +939,246 @@ This is not unique to Git/GitHub
 
 ![](images/dropbox-conflicted-copy.webp)
 
----
-
-### Merge Conflicts
-
-When you and a collaborator edit the same code
 
 ???
+
+With Dropbox, you have to manually copy in pieces you want to keep
+
+---
+
+## Merge Conflicts
+
+--
+
+When you and someone else edit the same code
+
+--
+
+Git shows you where conflicts are ...
+
+--
+
+And then lets you decide which version to keep
+
+
+---
+
+## Merge Conflicts
+
+Open file with conflicts
+
+Look for the conflict marker <<<<<<<
+
+Look for the divider  =======
+
+Look for the end conflict marker >>>>>>>
+
+???
+
+> To see the beginning of the merge conflict in your file, search the file for the conflict marker <<<<<<<. When you open the file in your text editor, you'll see the changes from the HEAD or base branch after the line <<<<<<< HEAD. Next, you'll see =======, which divides your changes from the changes in the other branch, followed by >>>>>>> BRANCH-NAME. In this example, one person wrote "open an issue" in the base or HEAD branch and another person wrote "ask your question in IRC" in the compare branch or branch-a.
+
+> https://docs.github.com/en/github/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line
+
 
 How do we avoid them? See next steps.
 
 ---
 
-## Always Pull Before Pushing
+class: dk-section-title, inverse, middle, center
+
+background-image:url("images/push.jpg")
+
+# Can't Push Code to GitHub
 
 ---
 
-## Push Early and Often
-
----
-
-### Show How You Can't Push if You Have Unincorproated Changes
-
----
-
-## Dealing with Merge Conflicts
-
----
+### Failed to Push
 
 
-### Can't Push
+Update this image: 
+
+![](https://show.rfor.us/zEaf4h/download)
+
+???
+
+https://happygitwithr.com/push-rejected.html
 
 
 ---
 
-### Can't Pull
+### Failed to Push
+
+Pull changes in
+
+Deal with merge conflicts
+
+Push
+
+
+---
+
+class: dk-section-title, inverse, middle, center
+
+background-image:url("images/git-best-practices.jpg")
+
+## Let's Keep Bad Things from Happening 
+
+
+---
+
+### Commit Regularly
+
+--
+
+> If you feel the need to use the word “and” in your commit message, you are probably not committing often enough.
+
+Source: [Nick Hodges](https://betterprogramming.pub/six-rules-for-good-git-hygiene-5006cf9e9e2)
+
+
+---
+
+### Push Early and Often
+
+--
+
+> If you had pushed D first, you’d be relaxing and they’d be figuring out how to integrate C into their history in order to push. So push your work often. Don’t go dark and work “offline” for long stretches of time.
+
+Source: [Happy Git with R](https://happygitwithr.com/push-rejected.html#she-who-pushes-first-wins)
+
+
+---
+
+### Always Pull Before Pushing
+
+> This is a bedrock rule. Before you try to push code out to the repository, you should always pull all the current changes from the remote repository to your local machine. Doing so will ensure that your local copy is in sync with the remote repository. Remember, other people have been pushing to the remote copy, and if you push before syncing up, you could end up with multiple heads or merge conflicts when you push.
+
+Source: [Nick Hodges](https://betterprogramming.pub/six-rules-for-good-git-hygiene-5006cf9e9e2)
+
+
+---
+
+# Use Branches
+
+---
+
+class: dk-section-title, inverse, middle, center
+
+background-image:url("images/branches.jpg")
+
+# Branches
+
+
+---
+
+## What are Branches?
+
+Copy of your code that you can work on while leaving your main branch as is
+
+---
+
+## Why Use Branches?
+
+- You've got a working version in the main branch
+
+- You want to test something out and only use it if it works
+
+- Work on Your Code Without Messing Up Things that are Working
+
+
+
+---
+
+## Branch Names
+
+Talk about master vs main
+
+Show how to change name of master to main: 
+
+```{r}
+library(usethis)
+git_default_branch_configure()
+```
+
+
+???
+
+https://www.tidyverse.org/blog/2021/10/renaming-default-branch/
+https://www.jumpingrivers.com/blog/git-moving-master-to-main/
+
+---
+
+## How Do We Create a New Branch? 
+
+- Show it on RStudio
+
+
+
+---
+
+## How Do We Merge Our Work Back Into the Main Branch?
+
+- Can't do this within RStudio
+
+
+---
+
+
+## Pull Requests
+
+- GitLab calls them merge requests, which is a more descriptive name
+
+---
+
+### Pull Requests
+
+Can package up a series of changes and allow someone else to review them before merging into main
+
+---
+
+### How to Create a Pull Request
+
+Go to branches on GitHub
+
+Find branch you want to use for your pull request
+
+Hit the new pull request button
+
+---
+
+### No merge conflicts? Merge away!
+
+- Delete branch if desired
+
+---
+
+### Deal with merge conflicts on GitHub
+
+What if you have merge conflict on PR
+
+???
+
+https://docs.github.com/en/github/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github
+
+---
+
+
+### How to Deal with Someone Else's Pull Request
+
+Open PR
+
+Review it
+
+Discuss changes
+
+When ready, merge PR
+
+Delete branch if desired
+
+
+???
+
+Transition to talking about project management
+
 
 ---
 
@@ -892,66 +1190,32 @@ How do we avoid them? See next steps.
 
 ---
 
-### Assign Issues to Individuals
+### Reference Commits and Pull Requests in Issues
 
 ---
 
-### Reference Commits in Issues
+## Other Metadata about Issues
 
 ---
 
-## Work on Your Code Without Messing Up Things that are Working
+### Assignees
 
 ---
 
-## Branches
+### Labels
 
 ---
 
-### Branch Names
-
-Talk about master vs main
-
-Show how to change name of master to main: 
-
-`usethis::use_git_config(init.defaultBranch = "main")`
+### Projects
 
 ---
 
-### Why Use Branches?
-
-- You've got a working version in the main branch
-
-- You want to test something out and only use it if it works
+### Milestones
 
 ---
 
-### GitHub Desktop
+## Linked Pull Requests
 
-1. Download it
-
-1. Import repo
-
-
----
-
-### Working with Branches
-
-1. Create a new branch in GitHub Desktop
-
-1. Publish it to GitHub
-
-1. Make your changes
-
-1. Merge them into main
-
-1. Delete branch (if desired)
-
----
-
-## Pull Requests
-
-- GitLab calls them merge requests, which is a more descriptive name
 
 
 ---
