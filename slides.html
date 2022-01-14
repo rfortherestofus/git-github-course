@@ -898,11 +898,15 @@ class: center, middle, dk-section-title
 
 ???
 
+Travel back in time
+
 Build websites
 
 GitHub Actions
 
-Contribute to open source
+See and contribute to open source
+
+
 
 ---
 
@@ -940,6 +944,12 @@ background-image:url("images/pull.jpg")
 
 ## Can't Pull Code from GitHub
 
+---
+
+class: center, middle
+
+![](images/cant-pull.png)
+
 ???
 
 Make example of me working and not being able to pull in changes
@@ -955,9 +965,9 @@ background-image:url("images/highway.jpg")
 
 ## Merge Conflicts
 
---
+---
 
-This is not unique to Git/GitHub
+## Merge Conflicts Are Not Unique to Git/GitHub
 
 --
 
@@ -987,15 +997,24 @@ And then lets you decide which version to keep
 
 ---
 
-## Merge Conflicts
+## How to Deal With Merge Conflicts
 
-Open file with conflicts
+---
 
-Look for the conflict marker &lt;&lt;&lt;&lt;&lt;&lt;&lt;
+class: dk-section-title, center, middle
 
-Look for the divider  =======
+background-image:url("images/panic.jpg")
 
-Look for the end conflict marker &gt;&gt;&gt;&gt;&gt;&gt;&gt;
+
+## Step #1: Don't Panic!
+
+
+---
+
+## How to Deal With Merge Conflicts
+
+![](images/git-conflicts.svg)
+
 
 ???
 
@@ -1008,18 +1027,75 @@ How do we avoid them? See next steps.
 
 ---
 
+## Conflict Markers
+
+![](images/git-conflict-markers.svg)
+
+
+
+---
+
+## Conflict Divider
+
+![](images/git-conflict-divider.svg)
+---
+
+## Code in Your Local Version
+
+![](images/git-conflicts-local-code.svg)
+---
+
+## Code in Remote Version
+
+![](images/git-conflicts-remote-code.svg)
+
+---
+
+## Commit of Code in Your Remote Version 
+
+![](images/git-conflicts-remote-code-commit.svg)
+
+---
+
+## How to Deal With Merge Conflicts
+
+--
+
+1. Decide which pieces of the local/remote code you want to keep
+
+--
+
+1. Remove any code you **don't** want to keep
+
+--
+
+1. Remove the conflict markers and divider
+
+--
+
+1. Commit your code
+
+---
+
+class: dk-section-title, inverse, middle, center
+
+background-image:url("images/relax.jpg")
+
+## Relax!
+
+
+---
+
 class: dk-section-title, inverse, middle, center
 
 background-image:url("images/push.jpg")
 
-# Can't Push Code to GitHub
+## Can't Push Code to GitHub
 
 ---
 
-### Failed to Push
+### Can't Push Code to GitHub
 
-
-Update this image: 
 
 ![](https://show.rfor.us/zEaf4h/download)
 
@@ -1030,13 +1106,19 @@ https://happygitwithr.com/push-rejected.html
 
 ---
 
-### Failed to Push
+### Can't Push Code to GitHub
 
-Pull changes in
+--
 
-Deal with merge conflicts
+1. Pull code from GitHub
 
-Push
+--
+
+1. Deal with merge conflicts (if there are any)
+
+--
+
+1. Push!
 
 
 ---
@@ -1048,13 +1130,12 @@ background-image:url("images/git-best-practices.jpg")
 ## Let's Keep Bad Things from Happening 
 
 
+
 ---
 
-### Commit Regularly
+### Always Pull Before Pushing
 
---
-
-&gt; If you feel the need to use the word “and” in your commit message, you are probably not committing often enough.
+&gt; Before you try to push code out to the repository, you should always pull all the current changes from the remote repository to your local machine. Doing so will ensure that your local copy is in sync with the remote repository. Remember, other people have been pushing to the remote copy, and if you push before syncing up, you could end up with multiple heads or merge conflicts when you push.
 
 Source: [Nick Hodges](https://betterprogramming.pub/six-rules-for-good-git-hygiene-5006cf9e9e2)
 
@@ -1072,16 +1153,22 @@ Source: [Happy Git with R](https://happygitwithr.com/push-rejected.html#she-who-
 
 ---
 
-### Always Pull Before Pushing
+### Commit Regularly
 
-&gt; This is a bedrock rule. Before you try to push code out to the repository, you should always pull all the current changes from the remote repository to your local machine. Doing so will ensure that your local copy is in sync with the remote repository. Remember, other people have been pushing to the remote copy, and if you push before syncing up, you could end up with multiple heads or merge conflicts when you push.
+--
+
+&gt; If you feel the need to use the word “and” in your commit message, you are probably not committing often enough.
 
 Source: [Nick Hodges](https://betterprogramming.pub/six-rules-for-good-git-hygiene-5006cf9e9e2)
 
 
+
 ---
 
-# Use Branches
+### Use Branches
+
+Let's dive in!
+
 
 ---
 
@@ -1096,27 +1183,86 @@ background-image:url("images/branches.jpg")
 
 ## What are Branches?
 
+--
+
+![](images/git-branch.svg)
+
+???
+
 Copy of your code that you can work on while leaving your main branch as is
+
+Start with example of API website: what if I want to make changes but not mess it up
 
 ---
 
+## You've Used "Branches"
+
+--
+
+![](images/word-branches.svg)
+
+---
+
+class: center, middle
+
+## Git Branches Make Things Much Simpler 
+
+???
+
+Show me working in project and making a v2 version of Rmd file and then switching to Git approach and making a new branch
+
+---
+
+
 ## Why Use Branches?
 
-- You've got a working version in the main branch
+--
 
-- You want to test something out and only use it if it works
+1. You've got a working version in the main branch **you don't want to mess up**
 
-- Work on Your Code Without Messing Up Things that are Working
+--
 
+1. You can **test something out** and only merge it back into the main branch if it works
 
 
 ---
 
 ## Branch Names
 
-Talk about master vs main
+--
 
-Show how to change name of master to main: 
+Historically, the default branch was called **master**
+
+--
+
+Recently, people have recognized **master** is problematic and shifted to using **main** instead
+
+???
+
+Pan on https://sfconservancy.org/news/2020/jun/23/gitbranchname/
+
+
+https://www.tidyverse.org/blog/2021/10/renaming-default-branch/
+https://www.jumpingrivers.com/blog/git-moving-master-to-main/
+
+
+
+---
+
+## How to Switch Master to Main in Your Current Project
+
+
+
+```r
+library(usethis)
+git_default_branch_rename()
+```
+
+
+---
+
+## How to Use Main in Future Projects
+
 
 
 ```r
@@ -1125,16 +1271,20 @@ git_default_branch_configure()
 ```
 
 
-???
-
-https://www.tidyverse.org/blog/2021/10/renaming-default-branch/
-https://www.jumpingrivers.com/blog/git-moving-master-to-main/
 
 ---
 
-## How Do We Create a New Branch? 
+background-image:url("images/create-branch.jpg")
+
+class: dk-section-title, inverse, middle, center
+
+## How to Create Branches
+
+???
 
 - Show it on RStudio
+- Highlight that you can do whatever in branch and it won't affect main
+- Show that you can see which branch you're in by looking at git tab
 
 
 
@@ -1142,7 +1292,17 @@ https://www.jumpingrivers.com/blog/git-moving-master-to-main/
 
 ## How Do We Merge Our Work Back Into the Main Branch?
 
-- Can't do this within RStudio
+--
+
+You can't do this within RStudio
+
+--
+
+You can merge directly using the command line or a tool like GitHub Desktop
+
+--
+
+But I recommend that you use pull requests instead
 
 
 ---
@@ -1203,7 +1363,7 @@ Delete branch if desired
 ???
 
 Transition to talking about project management
-
+https://twitter.com/dgkeyes/status/1454156996819644416
 
 ---
 
@@ -1246,6 +1406,17 @@ Transition to talking about project management
 ---
 
 # Cool Stuff You Can Do with GitHub
+
+---
+
+
+## Travel Back in Time
+
+https://twitter.com/tw0handt0uch1/status/1481821421676285953?t=fQS4ryKfveDopWSfcKHo8g&amp;s=09
+
+Show how to copy old code history
+
+Show how to revert single file back to previous version
 
 ---
 

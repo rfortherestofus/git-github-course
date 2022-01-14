@@ -28,4 +28,4 @@ pdf_to_gif <- function(pdf_location,
 }
 
 
-pdf_to_gif("slides.pdf",  gif_file_name = "slides")
+pdf_to_gif("slides.pdf",  gif_file_name = "slides.gif")
