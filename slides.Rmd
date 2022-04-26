@@ -12,10 +12,14 @@ output:
       ratio: 16:9
 ---
 
-```{r child = "setup.Rmd"}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(eval = FALSE, 
+                      warning = FALSE,
+                      message = FALSE,
+                      rows.print = 5)
 ```
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/bg-github.jpg")
 
@@ -27,7 +31,7 @@ I show things as much as possible within R and not at the command line
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/bg-confused.jpg")
 
@@ -119,7 +123,7 @@ Just pan on GitLab and BitBucket websites
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/bg-workstation.jpg")
 
@@ -189,7 +193,7 @@ class: center, middle
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/bg-setup.jpg")
 
@@ -243,7 +247,7 @@ class: inverse
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/bg-git.jpg")
 
@@ -404,7 +408,7 @@ class: center, middle
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/bg-whisper.jpg")
 
@@ -444,7 +448,7 @@ class: inverse
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 
 background-image:url("images/bg-time-travel.jpg")
@@ -493,7 +497,7 @@ class: inverse
 ---
 
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/bg-github.jpg")
 
@@ -589,7 +593,7 @@ class: inverse
 
 ---
 
-class: dk-section-title, middle, center
+class: middle, center
 
 background-image:url("images/bg-in-sync.jpg")
 
@@ -661,7 +665,7 @@ class: inverse
 
 ---
 
-class: dk-section-title, middle, center
+class: middle, center
 
 background-image:url("images/handshake.jpg")
 
@@ -814,7 +818,7 @@ class: inverse
 ---
 
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/bg-pair-programming.jpg")
 
@@ -822,7 +826,7 @@ background-image:url("images/bg-pair-programming.jpg")
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/kids-pulling.jpg")
 
@@ -914,7 +918,7 @@ https://xkcd.com/1597/
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/pull.jpg")
 
@@ -935,7 +939,7 @@ Have changes locally that you haven't committed which you need to do before pull
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/highway.jpg")
 
@@ -977,7 +981,7 @@ And then lets you decide which version to keep
 
 ---
 
-class: dk-section-title, center, middle
+class: center, middle
 
 background-image:url("images/panic.jpg")
 
@@ -1053,7 +1057,7 @@ How do we avoid them? See next steps.
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/relax.jpg")
 
@@ -1062,7 +1066,7 @@ background-image:url("images/relax.jpg")
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/push.jpg")
 
@@ -1099,7 +1103,7 @@ https://happygitwithr.com/push-rejected.html
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/git-best-practices.jpg")
 
@@ -1148,7 +1152,7 @@ Let's dive in!
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/branches.jpg")
 
@@ -1250,7 +1254,7 @@ git_default_branch_configure()
 
 background-image:url("images/create-branch.jpg")
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 ## How to Create Branches
 

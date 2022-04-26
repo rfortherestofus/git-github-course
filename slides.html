@@ -3,7 +3,7 @@
   <head>
     <title>Using Git and GitHub with R</title>
     <meta charset="utf-8" />
-    <script src="libs/header-attrs-2.11/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.13/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
     <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
@@ -20,20 +20,7 @@ class: center, middle, inverse, title-slide
 
 
 
-
-layout: true
-  
-&lt;div class="dk-footer"&gt;
-&lt;span&gt;
-&lt;a href="https://rfortherestofus.com/" target="_blank"&gt;
-&lt;img src="images/rru-text-only.svg" style="height: 20px;"&gt;
-&lt;/a&gt;
-&lt;/span&gt;
-&lt;/div&gt; 
-
----
-
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/bg-github.jpg")
 
@@ -45,7 +32,7 @@ I show things as much as possible within R and not at the command line
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/bg-confused.jpg")
 
@@ -137,7 +124,7 @@ Just pan on GitLab and BitBucket websites
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/bg-workstation.jpg")
 
@@ -207,7 +194,7 @@ class: center, middle
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/bg-setup.jpg")
 
@@ -261,7 +248,7 @@ class: inverse
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/bg-git.jpg")
 
@@ -424,7 +411,7 @@ class: center, middle
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/bg-whisper.jpg")
 
@@ -464,7 +451,7 @@ class: inverse
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 
 background-image:url("images/bg-time-travel.jpg")
@@ -513,7 +500,7 @@ class: inverse
 ---
 
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/bg-github.jpg")
 
@@ -609,7 +596,7 @@ class: inverse
 
 ---
 
-class: dk-section-title, middle, center
+class: middle, center
 
 background-image:url("images/bg-in-sync.jpg")
 
@@ -683,7 +670,7 @@ class: inverse
 
 ---
 
-class: dk-section-title, middle, center
+class: middle, center
 
 background-image:url("images/handshake.jpg")
 
@@ -838,7 +825,7 @@ class: inverse
 ---
 
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/bg-pair-programming.jpg")
 
@@ -846,7 +833,7 @@ background-image:url("images/bg-pair-programming.jpg")
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/kids-pulling.jpg")
 
@@ -938,7 +925,7 @@ https://xkcd.com/1597/
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/pull.jpg")
 
@@ -959,7 +946,7 @@ Have changes locally that you haven't committed which you need to do before pull
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/highway.jpg")
 
@@ -1001,7 +988,7 @@ And then lets you decide which version to keep
 
 ---
 
-class: dk-section-title, center, middle
+class: center, middle
 
 background-image:url("images/panic.jpg")
 
@@ -1077,7 +1064,7 @@ How do we avoid them? See next steps.
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/relax.jpg")
 
@@ -1086,7 +1073,7 @@ background-image:url("images/relax.jpg")
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/push.jpg")
 
@@ -1123,7 +1110,7 @@ https://happygitwithr.com/push-rejected.html
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/git-best-practices.jpg")
 
@@ -1172,7 +1159,7 @@ Let's dive in!
 
 ---
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 background-image:url("images/branches.jpg")
 
@@ -1276,7 +1263,7 @@ git_default_branch_configure()
 
 background-image:url("images/create-branch.jpg")
 
-class: dk-section-title, inverse, middle, center
+class: inverse, middle, center
 
 ## How to Create Branches
 
@@ -1285,6 +1272,7 @@ class: dk-section-title, inverse, middle, center
 - Show it on RStudio
 - Highlight that you can do whatever in branch and it won't affect main
 - Show that you can see which branch you're in by looking at git tab
+- Make commits on branch (show these commits on GH)
 
 
 
@@ -1302,7 +1290,7 @@ You can merge directly using the command line or a tool like GitHub Desktop
 
 --
 
-But I recommend that you use pull requests instead
+But I recommend that you use **pull requests** instead
 
 
 ---
@@ -1312,11 +1300,9 @@ But I recommend that you use pull requests instead
 
 - GitLab calls them merge requests, which is a more descriptive name
 
----
+- They're a way to say, "I've done some thing and I'm ready to merge my code back into the main branch"
 
-### Pull Requests
-
-Can package up a series of changes and allow someone else to review them before merging into main
+- Can include multiple commits
 
 ---
 
@@ -1327,6 +1313,12 @@ Go to branches on GitHub
 Find branch you want to use for your pull request
 
 Hit the new pull request button
+
+---
+
+### Anatomy of a Pull Request
+
+Have screenshot 
 
 ---
 
@@ -1360,10 +1352,18 @@ When ready, merge PR
 Delete branch if desired
 
 
+
+
+---
+
+### Use Pull Requests Even When Working Solo
+
+https://twitter.com/dgkeyes/status/1454156996819644416
+
+
 ???
 
 Transition to talking about project management
-https://twitter.com/dgkeyes/status/1454156996819644416
 
 ---
 
