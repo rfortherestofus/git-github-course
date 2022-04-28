@@ -593,7 +593,7 @@ class: inverse
 
 ---
 
-class: middle, center
+class: middle, center, inverse
 
 background-image:url("images/bg-in-sync.jpg")
 
@@ -665,7 +665,7 @@ class: inverse
 
 ---
 
-class: middle, center
+class: middle, center, inverse
 
 background-image:url("images/handshake.jpg")
 
@@ -834,7 +834,7 @@ background-image:url("images/kids-pulling.jpg")
 
 ---
 
-## With GitHub, Many People Can Work on the Same Project at Same Time
+## Many People Can Work on the Same Project at Same Time
 
 --
 
@@ -857,7 +857,7 @@ class: center, middle
 
 ---
 
-## Using GitHub Lets Us Combine Code and Communication About Our Code
+## Combine Code and Communication About Our Code
 
 ![](images/commit-messages.png)
 
@@ -866,12 +866,21 @@ class: center, middle
 https://github.com/rfortherestofus/api-food-asset-map/commits/main
 
 
+---
+
+class: center, middle
+
+![](images/gh-issue.png)
+
+???
+
+https://github.com/rfortherestofus/api-food-asset-map/issues/69
 
 ---
 
 background-image:url("images/rubix-cube.jpg")
 
-class: center, middle, dk-section-title
+class: center, middle, inverse
 
 
 ## There Are Lots of Other Cool Things You Can Do if You Use GitHub
@@ -892,9 +901,9 @@ See and contribute to open source
 
 background-image:url("images/hands-in-head.jpg")
 
-class: center, middle, dk-section-title
+class: center, middle, inverse
 
-## Drawback of GitHub: Sometimes Things Go Wrong
+## Drawback of GitHub:<br>Sometimes Things Go Wrong
 
 ---
 
@@ -915,6 +924,8 @@ class: center, middle
 ???
 
 https://xkcd.com/1597/
+Let's learn how to deal with common problems
+
 
 ---
 
@@ -962,8 +973,6 @@ With Dropbox, you have to manually copy in pieces you want to keep
 
 ## Merge Conflicts
 
---
-
 When you and someone else edit the same code
 
 --
@@ -972,19 +981,14 @@ Git shows you where conflicts are ...
 
 --
 
-And then lets you decide which version to keep
+But it's up to you to decide which code to keep
 
 
 ---
 
-## How to Deal With Merge Conflicts
-
----
-
-class: center, middle
+class: center, middle, inverse
 
 background-image:url("images/panic.jpg")
-
 
 ## Step #1: Don't Panic!
 
@@ -1055,6 +1059,10 @@ How do we avoid them? See next steps.
 
 1. Commit your code
 
+--
+
+1. Push your code
+
 ---
 
 class: inverse, middle, center
@@ -1107,7 +1115,7 @@ class: inverse, middle, center
 
 background-image:url("images/git-best-practices.jpg")
 
-## Let's Keep Bad Things from Happening 
+## Let's Keep Bad Things from Happening in the First Place
 
 
 
@@ -1175,7 +1183,7 @@ Start with example of API website: what if I want to make changes but not mess i
 
 ---
 
-## You've Used "Branches"
+## You've Used “Branches”
 
 --
 
@@ -1220,8 +1228,6 @@ Recently, people have recognized **master** is problematic and shifted to using 
 ???
 
 Pan on https://sfconservancy.org/news/2020/jun/23/gitbranchname/
-
-
 https://www.tidyverse.org/blog/2021/10/renaming-default-branch/
 https://www.jumpingrivers.com/blog/git-moving-master-to-main/
 
@@ -1248,7 +1254,9 @@ library(usethis)
 git_default_branch_configure()
 ```
 
+???
 
+TODO: For learn more, add link to post on how to change all old branches
 
 ---
 
@@ -1258,6 +1266,13 @@ class: inverse, middle, center
 
 ## How to Create Branches
 
+---
+
+### Create a New Branch
+
+![](images/create-branch.png)
+
+
 ???
 
 - Show it on RStudio
@@ -1265,11 +1280,18 @@ class: inverse, middle, center
 - Show that you can see which branch you're in by looking at git tab
 - Make commits on branch (show these commits on GH)
 
+---
+
+### Changes Only Impact the Current Branch
+
+???
+
+- Show how you can alter files and it doesn't change main
 
 
 ---
 
-## How Do We Merge Our Work Back Into the Main Branch?
+## How to Merge Back Into the Main Branch
 
 --
 
@@ -1286,12 +1308,32 @@ But I recommend that you use **pull requests** instead
 
 ---
 
+class: center, middle
+
+```{r eval = TRUE, echo = FALSE}
+tweetrmd::tweet_embed("https://twitter.com/dgkeyes/status/1450498518993424389",
+                      align = "center")
+```
+
+???
+
+Show responses and how this changed my thinking
+
+
+---
+
 
 ## Pull Requests
 
-- GitLab calls them merge requests, which is a more descriptive name
+--
+
+- GitLab calls them [merge requests](https://docs.gitlab.com/ee/user/project/merge_requests/), which is a more descriptive name
+
+--
 
 - They're a way to say, "I've done some thing and I'm ready to merge my code back into the main branch"
+
+--
 
 - Can include multiple commits
 
@@ -1299,27 +1341,71 @@ But I recommend that you use **pull requests** instead
 
 ### How to Create a Pull Request
 
-Go to branches on GitHub
+![](images/gh-branches.png)
 
-Find branch you want to use for your pull request
+---
 
-Hit the new pull request button
+#### How to Create a Pull Request
+
+Find branch you want to use for your pull request and click new pull request
+
+![](images/gh-new-pull-request.png)
+
+---
+
+#### How to Create a Pull Request
+
+Name your pull request and add any comments
+
+![](images/gh-pull-request-screen.png)
 
 ---
 
 ### Anatomy of a Pull Request
 
-Have screenshot 
+![](images/gh-pull-request-merge.png)
+
+???
+
+Conversation
+Commits
+Checks
+Files changed
+Reviewers
+
 
 ---
 
-### No merge conflicts? Merge away!
+
+### How to Review a Pull Request
+
+1. Open pull request
+1. Review it
+1. Discuss changes in conversation
+1. When ready, merge pull request
+1. Delete branch if desired
+
+
+---
+
+class: center, middle
+
+### How to Close a Pull Request
+
+---
+
+#### No merge conflicts? Merge away!
+
+![](images/gh-pull-request-merge.png)
+
+
+???
 
 - Delete branch if desired
 
 ---
 
-### Deal with merge conflicts on GitHub
+#### Deal with merge conflicts on GitHub
 
 What if you have merge conflict on PR
 
@@ -1327,30 +1413,17 @@ What if you have merge conflict on PR
 
 https://docs.github.com/en/github/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github
 
----
-
-
-### How to Deal with Someone Else's Pull Request
-
-Open PR
-
-Review it
-
-Discuss changes
-
-When ready, merge PR
-
-Delete branch if desired
-
-
 
 
 ---
 
 ### Use Pull Requests Even When Working Solo
 
-https://twitter.com/dgkeyes/status/1454156996819644416
 
+```{r eval = TRUE, echo = FALSE}
+tweetrmd::tweet_embed("https://twitter.com/apreshill/status/1363104026460577793",
+                      align = "center")
+```
 
 ???
 
@@ -1364,37 +1437,53 @@ Transition to talking about project management
 
 ## GitHub Issues
 
+![](images/gh-issue.png)
+
+
+
 ---
 
 ### Reference Commits and Pull Requests in Issues
 
----
+If you paste in the URL of a commit, it automatically shortens and links it. 
 
-## Other Metadata about Issues
+![](images/gh-linked-commit.png)
 
----
+???
 
-### Assignees
-
----
-
-### Labels
+https://github.com/rfortherestofus/api-food-asset-map/issues/9
 
 ---
 
-### Projects
+## Other Issue Metadata
+
+![](images/gh-issue.png)
+
+???
+
+Assignees
+
+Labels
+
+Projects
+
+Milestones
 
 ---
 
-### Milestones
+## Linked Branches
+
+![](images/gh-issue-linked-branch.png)
+
+
+
+???
+
+Show about creating a branch for issue
 
 ---
 
-## Linked Pull Requests
-
-
-
----
+class: inverse, center, middle
 
 # Cool Stuff You Can Do with GitHub
 
@@ -1403,16 +1492,23 @@ Transition to talking about project management
 
 ## Travel Back in Time
 
+???
+
 https://twitter.com/tw0handt0uch1/status/1481821421676285953?t=fQS4ryKfveDopWSfcKHo8g&s=09
 
 Show how to copy old code history
 
 Show how to revert single file back to previous version
 
+Mention GH Desktop
+
 ---
 
-## Publish using Netlify
+## Publish Your Work Online
 
+???
+
+- Show API food map
 - Mention that GH pages exists but I don't like it because it's slow
 
 ---
@@ -1420,4 +1516,8 @@ Show how to revert single file back to previous version
 ## GitHub Actions
 
 - Use a single example (e.g. update report every night and make new commit, thus pushing it to Netlify)
+
+???
+
+https://orchid00.github.io/actions_sandbox/
 
