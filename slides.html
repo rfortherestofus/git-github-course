@@ -842,7 +842,7 @@ background-image:url("images/kids-pulling.jpg")
 
 ---
 
-## Many People Can Work on the Same Project at Same Time
+### Many People Can Work on the Same Project at Same Time
 
 --
 
@@ -865,7 +865,7 @@ class: center, middle
 
 ---
 
-## Combine Code and Communication About Our Code
+### Combine Code and Communication About Our Code
 
 ![](images/commit-messages.png)
 
@@ -891,7 +891,7 @@ background-image:url("images/rubix-cube.jpg")
 class: center, middle, inverse
 
 
-## There Are Lots of Other Cool Things You Can Do if You Use GitHub
+### There Are Lots of Other Cool Things You Can Do if You Use GitHub
 
 ???
 
@@ -941,7 +941,7 @@ class: inverse, middle, center
 
 background-image:url("images/pull.jpg")
 
-## Can't Pull Code from GitHub
+### Can't Pull Code from GitHub
 
 ---
 
@@ -962,11 +962,11 @@ class: inverse, middle, center
 
 background-image:url("images/highway.jpg")
 
-## Merge Conflicts
+### Merge Conflicts
 
 ---
 
-## Merge Conflicts Are Not Unique to Git/GitHub
+### Merge Conflicts Are Not Unique to Git/GitHub
 
 --
 
@@ -1030,11 +1030,13 @@ How do we avoid them? See next steps.
 ## Conflict Divider
 
 ![](images/git-conflict-divider.svg)
+
 ---
 
 ## Code in Your Local Version
 
 ![](images/git-conflicts-local-code.svg)
+
 ---
 
 ## Code in Remote Version
@@ -1093,7 +1095,7 @@ background-image:url("images/push.jpg")
 ### Can't Push Code to GitHub
 
 
-![](https://show.rfor.us/zEaf4h/download)
+![](images/cant-push-message.jpeg)
 
 ???
 
@@ -1191,7 +1193,7 @@ Start with example of API website: what if I want to make changes but not mess i
 
 ---
 
-## You've Used “Branches”
+### You've Used “Branches”
 
 --
 
@@ -1201,7 +1203,7 @@ Start with example of API website: what if I want to make changes but not mess i
 
 class: center, middle
 
-## Git Branches Make Things Much Simpler 
+### Git Branches Make Things Much Simpler 
 
 ???
 
@@ -1210,7 +1212,7 @@ Show me working in project and making a v2 version of Rmd file and then switchin
 ---
 
 
-## Why Use Branches?
+### Why Use Branches?
 
 --
 
@@ -1243,7 +1245,7 @@ https://www.jumpingrivers.com/blog/git-moving-master-to-main/
 
 ---
 
-## How to Switch Master to Main in Your Current Project
+### How to Switch Master to Main in Your Current Project
 
 
 
@@ -1255,7 +1257,7 @@ git_default_branch_rename()
 
 ---
 
-## How to Use Main in Future Projects
+### How to Use Main in Future Projects
 
 
 
@@ -1292,6 +1294,18 @@ class: inverse, middle, center
 
 ---
 
+### This Also Creates a New Branch on GitHub
+
+![](images/gh-branches.png)
+
+???
+
+And the two track each other
+
+---
+
+class: center, middle
+
 ### Changes Only Impact the Current Branch
 
 ???
@@ -1309,7 +1323,7 @@ You can't do this within RStudio
 
 --
 
-You can merge directly using the command line or a tool like GitHub Desktop
+You can merge directly using the command line or a tool like [GitHub Desktop](https://desktop.github.com/)
 
 --
 
@@ -1353,19 +1367,23 @@ Show responses and how this changed my thinking
 
 ---
 
-#### How to Create a Pull Request
-
-Find branch you want to use for your pull request and click new pull request
+### How to Create a Pull Request
 
 ![](images/gh-new-pull-request.png)
 
+???
+
+Find branch you want to use for your pull request and click new pull request
+
 ---
 
-#### How to Create a Pull Request
-
-Name your pull request and add any comments
+### How to Create a Pull Request
 
 ![](images/gh-pull-request-screen.png)
+
+???
+
+Name your pull request and add any comments
 
 ---
 
@@ -1387,10 +1405,24 @@ Reviewers
 
 ### How to Review a Pull Request
 
+--
+
 1. Open pull request
+
+--
+
 1. Review it
+
+--
+
 1. Discuss changes in conversation
+
+--
+
 1. When ready, merge pull request
+
+--
+
 1. Delete branch if desired
 
 
@@ -1402,7 +1434,7 @@ class: center, middle
 
 ---
 
-#### No merge conflicts? Merge away!
+### No merge conflicts? Merge away!
 
 ![](images/gh-pull-request-merge.png)
 
@@ -1413,9 +1445,11 @@ class: center, middle
 
 ---
 
-#### Deal with merge conflicts on GitHub
+### Have Conflicts?
 
-What if you have merge conflict on PR
+--
+
+No biggie, just edit them directly on GitHub
 
 ???
 
@@ -1461,7 +1495,7 @@ https://github.com/rfortherestofus/api-food-asset-map/issues/9
 
 ---
 
-## Other Issue Metadata
+## How to Organize Issues
 
 ![](images/gh-issue.png)
 
@@ -1477,7 +1511,7 @@ Milestones
 
 ---
 
-## Linked Branches
+### Linked Branches
 
 ![](images/gh-issue-linked-branch.png)
 
@@ -1498,16 +1532,23 @@ class: inverse, center, middle
 
 ## Travel Back in Time
 
+???
+
 https://twitter.com/tw0handt0uch1/status/1481821421676285953?t=fQS4ryKfveDopWSfcKHo8g&amp;s=09
 
 Show how to copy old code history
 
 Show how to revert single file back to previous version
 
+Mention GH Desktop
+
 ---
 
-## Publish using Netlify
+## Publish Your Work Online
 
+???
+
+- Show API food map
 - Mention that GH pages exists but I don't like it because it's slow
 
 ---
@@ -1515,6 +1556,11 @@ Show how to revert single file back to previous version
 ## GitHub Actions
 
 - Use a single example (e.g. update report every night and make new commit, thus pushing it to Netlify)
+
+???
+
+https://github.com/rfortherestofus/pp-covid-biz-relief/blob/master/.github/workflows/email_report.yaml
+https://orchid00.github.io/actions_sandbox/
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
