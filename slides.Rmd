@@ -67,7 +67,6 @@ They're not the same thing
 
 You can use one without the other
 
-TODO: Image of Git vs GitHub
 
 ---
 
@@ -947,6 +946,38 @@ Make example of me working and not being able to pull in changes
 
 Have changes locally that you haven't committed which you need to do before pulling
 
+Do this in a real project
+
+---
+
+class: inverse
+
+# Your Turn
+
+--
+
+1. Working in your `local-first` project in RStudio, make an edit to your README.md file, but **do not commit your changes**
+
+--
+
+1. Go to the `local-first` project on GitHub, make a change to your README.md file and save it (this will automatically commit your changes)
+
+--
+
+1. In RStudio, attempt to pull from GitHub, making sure you get the message about needing to commit your changes before pulling
+
+--
+
+1. Now commit your edits in the RStudio version of the `local-first` project
+
+--
+
+1. Pull again, making sure you can successfully bring in the changes from GitHub
+
+--
+
+Heads up: you should get a message about a merge conflict. We'll deal with this in the next lesson!
+
 
 ---
 
@@ -1076,15 +1107,39 @@ background-image:url("images/relax.jpg")
 
 ---
 
+class: inverse
+
+# Your Turn
+
+You should have a merge conflict in the README.md file because you edited it both in RStudio and on GitHub
+
+--
+
+1. Open up the README.md file and find the conflict markers, conflict divider, and identify which parts of the code come from the changes you made in RStudio and which come from the changes you made on GitHub
+
+--
+
+1. Edit the README.md file to resolve the merge conflict
+
+--
+
+1. Commit (I usually use a message like "fix merge conflict")
+
+--
+
+1. Push your code to GitHub
+
+---
+
 class: inverse, middle, center
 
 background-image:url("images/push.jpg")
 
-## Can't Push Code to GitHub
+# Can't Push Code to GitHub
 
 ---
 
-### Can't Push Code to GitHub
+# Can't Push Code to GitHub
 
 
 ![](images/cant-push-message.jpeg)
@@ -1110,6 +1165,38 @@ https://happygitwithr.com/push-rejected.html
 
 1. Push!
 
+---
+
+class: inverse
+
+# Your Turn
+
+Make sure you do this in the order below!
+
+--
+
+1. Make an edit on the README.md file on GitHub
+
+--
+
+1. Make an edit on the README.md file on RStudio
+
+--
+
+1. Attempt to push your changes from RStudio to GitHub (it should fail)
+
+--
+
+1. Pull in changes from GitHub
+
+--
+
+1. Deal with any merge conflicts
+
+--
+
+1. Push your changes from RStudio to GitHub
+
 
 ---
 
@@ -1117,7 +1204,7 @@ class: inverse, middle, center
 
 background-image:url("images/git-best-practices.jpg")
 
-## Let's Keep Bad Things from Happening in the First Place
+# Let's Keep Bad Things from Happening in the First Place
 
 
 
@@ -1150,6 +1237,10 @@ Source: [Happy Git with R](https://happygitwithr.com/push-rejected.html#she-who-
 > If you feel the need to use the word “and” in your commit message, you are probably not committing often enough.
 
 Source: [Nick Hodges](https://betterprogramming.pub/six-rules-for-good-git-hygiene-5006cf9e9e2)
+
+???
+
+Show commits in repo as example
 
 
 
@@ -1240,10 +1331,25 @@ https://www.jumpingrivers.com/blog/git-moving-master-to-main/
 ### How to Switch Master to Main in Your Current Project
 
 
-```{r}
+```{r eval = TRUE}
 library(usethis)
+```
+
+--
+
+```{r eval = TRUE}
+git_default_branch()
+```
+
+
+---
+
+### How to Switch Master to Main in Your Current Project
+
+```{r eval = TRUE, message = TRUE}
 git_default_branch_rename()
 ```
+
 
 
 ---
@@ -1251,14 +1357,44 @@ git_default_branch_rename()
 ### How to Use Main in Future Projects
 
 
-```{r}
-library(usethis)
+```{r eval = TRUE, message = TRUE}
 git_default_branch_configure()
 ```
 
 ???
 
 TODO: For learn more, add link to post on how to change all old branches
+
+
+https://www.tidyverse.org/blog/2021/10/renaming-default-branch/
+https://www.garrickadenbuie.com/blog/branchmover/
+
+
+---
+
+class: inverse
+
+# Your Turn
+
+--
+
+1. Load the `usethis` package (install it if necessary)
+
+--
+
+1. Check the name of your default branch using `git_default_branch()`
+
+--
+
+1. If your default branch is called `master`, switch to main using `git_default_branch_rename()`
+
+--
+
+1. Set up your system to use `main` as the default branch in the future using `git_default_branch_configure()`
+
+???
+
+You can do all of these in the console
 
 ---
 
@@ -1302,6 +1438,24 @@ class: center, middle
 
 - Show how you can alter files and it doesn't change main
 
+
+---
+
+class: inverse
+
+# Your Turn
+
+--
+
+1. Working in your `local-first` project in RStudio, create a new branch
+
+--
+
+1. Edit your README.md file, commit your changes, and push them to GitHub
+
+--
+
+1. Go to your repo on GitHub and make sure you see the new branch and the changes you made to it
 
 ---
 
@@ -1418,6 +1572,11 @@ Reviewers
 1. Delete branch if desired
 
 
+???
+
+Can also do this with `usethis`
+https://www.garrickadenbuie.com/blog/pull-request-flow-usethis/
+
 ---
 
 class: center, middle
@@ -1465,6 +1624,14 @@ Transition to talking about project management
 
 ---
 
+class: inverse
+
+# Your Turn
+
+
+
+---
+
 # Project Management with GitHub
 
 ---
@@ -1489,6 +1656,20 @@ https://github.com/rfortherestofus/api-food-asset-map/issues/9
 
 ---
 
+class: inverse
+
+# Your Turn
+
+--
+
+1. Working in your `local-first` repo on GitHub, create a new issue
+
+--
+
+That's it!
+
+---
+
 ## How to Organize Issues
 
 ![](images/gh-issue.png)
@@ -1503,17 +1684,48 @@ Projects
 
 Milestones
 
+Do pan on this: https://twitter.com/EmilyRiederer/status/1263481778410569728
+
 ---
-
-### Linked Branches
-
-![](images/gh-issue-linked-branch.png)
 
 
 
 ???
 
-Show about creating a branch for issue
+Learn More:
+
+Show about creating a branch for issue and using PR to close issue
+Show about linking branches to PRs and vice versa
+
+
+---
+
+class: inverse
+
+# Your Turn
+
+--
+
+1. Assign the issue you created in the last lesson to yourself
+
+--
+
+1. Add a label to the issue
+
+--
+
+1. Create a milestone
+
+--
+
+1. Assign the issue to this milestone
+
+???
+
+https://twitter.com/dgkeyes/status/1263477415319425025
+https://stackoverflow.com/questions/39591795/what-is-the-difference-relationship-between-github-projects-and-milestones#:~:text=On%20GitHub%3A,that%20emphasizes%20the%20end%20time.
+https://show.rfor.us/nGyA2Q
+
 
 ---
 
@@ -1531,6 +1743,8 @@ class: inverse, center, middle
 https://twitter.com/tw0handt0uch1/status/1481821421676285953?t=fQS4ryKfveDopWSfcKHo8g&s=09
 
 Show how to copy old code history
+
+Explain that there are more automated ways to do this (e.g. cherry picking?)
 
 Show how to revert single file back to previous version
 
