@@ -6,7 +6,9 @@ library(rmarkdown)
 # Render slides -----------------------------------------------------------
 
 render("slides.Rmd")
-chrome_print("slides.html", "slides.pdf")
+
+chrome_print("slides.html", "slides.pdf",
+             timeout = 180)
 
 
 # Create GIF of slides ----------------------------------------------------

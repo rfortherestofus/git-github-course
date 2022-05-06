@@ -3,7 +3,7 @@
   <head>
     <title>Using Git and GitHub with R</title>
     <meta charset="utf-8" />
-    <script src="libs/header-attrs-2.13/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
     <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
@@ -14,7 +14,9 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Using Git and GitHub with R
+]
 
 ---
 
@@ -866,6 +868,8 @@ class: center, middle
 
 ### Combine Code and Communication About Our Code
 
+--
+
 ![](images/commit-messages.png)
 
 ???
@@ -874,6 +878,10 @@ https://github.com/rfortherestofus/api-food-asset-map/commits/main
 
 
 ---
+
+### Combine Code and Communication About Our Code
+
+--
 
 class: center, middle
 
@@ -890,7 +898,7 @@ background-image:url("images/rubix-cube.jpg")
 class: center, middle, inverse
 
 
-### There Are Lots of Other Cool Things You Can Do if You Use GitHub
+## There Are Lots of Other Cool Things You Can Do if You Use GitHub
 
 ???
 
@@ -993,7 +1001,7 @@ class: inverse, middle, center
 
 background-image:url("images/highway.jpg")
 
-### Merge Conflicts
+## Merge Conflicts
 
 ---
 
@@ -1011,6 +1019,8 @@ With Dropbox, you have to manually copy in pieces you want to keep
 ---
 
 ## Merge Conflicts
+
+--
 
 When you and someone else edit the same code
 
@@ -1212,13 +1222,15 @@ class: inverse, middle, center
 
 background-image:url("images/git-best-practices.jpg")
 
-# Let's Keep Bad Things from Happening in the First Place
+## Let's Keep Bad Things from Happening in the First Place
 
 
 
 ---
 
 ### Always Pull Before Pushing
+
+--
 
 &gt; Before you try to push code out to the repository, you should always pull all the current changes from the remote repository to your local machine. Doing so will ensure that your local copy is in sync with the remote repository. Remember, other people have been pushing to the remote copy, and if you push before syncing up, you could end up with multiple heads or merge conflicts when you push.
 
@@ -1255,6 +1267,8 @@ Show commits in repo as example
 ---
 
 ### Use Branches
+
+--
 
 Let's dive in!
 
@@ -1366,10 +1380,10 @@ git_default_branch_rename()
 ```
 
 ```
-## ✓ Default branch of source repo 'rfortherestofus/git-github-course' is 'main'. Nothing to be done.
+## ✔ Default branch of source repo 'rfortherestofus/git-github-course' is 'main'. Nothing to be done.
 ## • Be sure to update files that refer to the default branch by name.
 ##   Consider searching within your project for 'main'.
-## ✓ Default branch of local repo is 'main'. Nothing to be done.
+## ✔ Default branch of local repo is 'main'. Nothing to be done.
 ```
 
 
@@ -1385,7 +1399,7 @@ git_default_branch_configure()
 ```
 
 ```
-## ✓ Configuring init.defaultBranch as 'main'.
+## ✔ Configuring init.defaultBranch as 'main'.
 ## ℹ Remember: this only affects repos you create in the future.
 ```
 
@@ -1842,6 +1856,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable
