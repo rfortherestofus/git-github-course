@@ -1317,6 +1317,10 @@ Show me working in project and making a v2 version of Rmd file and then switchin
 
 1. You can **test something out** and only merge it back into the main branch if it works
 
+--
+
+1. It makes it easier to **collaborate with others**
+
 
 ---
 
@@ -1342,6 +1346,7 @@ https://www.jumpingrivers.com/blog/git-moving-master-to-main/
 
 ### How to Switch Master to Main in Your Current Project
 
+--
 
 ```{r eval = TRUE}
 library(usethis)
@@ -1362,6 +1367,11 @@ git_default_branch()
 git_default_branch_rename()
 ```
 
+--
+
+```{r eval = TRUE, message = TRUE}
+ git_default_branch_rediscover()
+```
 
 
 ---
@@ -1390,6 +1400,10 @@ class: inverse
 
 --
 
+Working in the local-first project:
+
+--
+
 1. Load the `usethis` package (install it if necessary)
 
 --
@@ -1398,7 +1412,7 @@ class: inverse
 
 --
 
-1. If your default branch is called `master`, switch to main using `git_default_branch_rename()`
+1. If your default branch is called `master`, switch to `main` using `git_default_branch_rename()` and `git_default_branch_rediscover()`
 
 --
 
@@ -1640,9 +1654,32 @@ class: inverse
 
 # Your Turn
 
+--
+
+Working in the branch you created previously in your local-first project:
+
+--
+
+1. Submit a pull request on GitHub
+
+--
+
+1. Review your pull request
+
+--
+
+1. Merge your code back into the main branch
+
+--
+
+1. Confirm that everything worked
 
 
 ---
+
+class: inverse, center, middle
+
+background-image:url("images/project-management.jpg")
 
 # Project Management with GitHub
 
@@ -1674,11 +1711,23 @@ class: inverse
 
 --
 
-1. Working in your `local-first` repo on GitHub, create a new issue
+1. Working in your `local-first` repo on GitHub, create a new issue that you can easily fix in RStudio
 
 --
 
-That's it!
+1. Make a change in RStudio that solves the issue
+
+--
+
+1. Commit your changes and push to GitHub
+
+--
+
+1. Add a link to your commit in the issue and make sure it shows up correctly
+
+--
+
+1. Close the issue
 
 ---
 
@@ -1698,17 +1747,6 @@ Milestones
 
 Do pan on this: https://twitter.com/EmilyRiederer/status/1263481778410569728
 
----
-
-
-
-???
-
-Learn More:
-
-Show about creating a branch for issue and using PR to close issue
-Show about linking branches to PRs and vice versa
-
 
 ---
 
@@ -1718,7 +1756,7 @@ class: inverse
 
 --
 
-1. Assign the issue you created in the last lesson to yourself
+1. Create a new issue and assign it to yourself
 
 --
 
@@ -1738,6 +1776,11 @@ https://twitter.com/dgkeyes/status/1263477415319425025
 https://stackoverflow.com/questions/39591795/what-is-the-difference-relationship-between-github-projects-and-milestones#:~:text=On%20GitHub%3A,that%20emphasizes%20the%20end%20time.
 https://show.rfor.us/nGyA2Q
 
+Learn More:
+
+Show about creating a branch for issue and using PR to close issue
+Show about linking branches to PRs and vice versa
+
 
 ---
 
@@ -1747,6 +1790,7 @@ class: inverse, center, middle
 
 ---
 
+class: center, middle
 
 ## Travel Back in Time
 
@@ -1764,6 +1808,8 @@ Mention GH Desktop
 
 ---
 
+class: center, middle
+
 ## Publish Your Work Online
 
 ???
@@ -1773,12 +1819,15 @@ Mention GH Desktop
 
 ---
 
+class: center, middle
+
 ## GitHub Actions
 
-- Use a single example (e.g. update report every night and make new commit, thus pushing it to Netlify)
+
 
 ???
 
+- Use a single example (e.g. update report every night and make new commit, thus pushing it to Netlify)
 https://github.com/rfortherestofus/pp-covid-biz-relief/blob/master/.github/workflows/email_report.yaml
 https://orchid00.github.io/actions_sandbox/
 
